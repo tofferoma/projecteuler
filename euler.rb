@@ -9,7 +9,7 @@ class Integer
     end
 
 	def factor
-		n = self
+		n = self.abs
 		result = Array.new
 		if n < 2 
 			result << 1
@@ -34,6 +34,10 @@ class Integer
 	def divisors
 		return calc_divisors(self.factor, Array.new)
 	end
+
+  def prime?
+    divisors.length == 2
+  end
 
    
     private

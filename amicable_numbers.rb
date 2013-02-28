@@ -63,6 +63,7 @@ class Integer
 		return calc_divisors(factors[1, factors.size-1], next_divisors)		
 	end 
 end
+puts Time.now
 
 amicable_numbers = Array.new
 2.upto(10000) { |i| 
@@ -74,3 +75,4 @@ amicable_numbers = Array.new
 	end
 }
 puts amicable_numbers.inject(0) { |r,e| r+e }
+puts Time.now
